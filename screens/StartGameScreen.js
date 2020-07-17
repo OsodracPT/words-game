@@ -66,7 +66,7 @@ const StartGameScreen = (props) => {
       }}
     >
       <View style={styles.screen}>
-        <Text>Start a New Game!</Text>
+        <Text>A Fun word guessing game to play with friends!</Text>
         <Card style={styles.inputContainer}>
           <Text>Select a number</Text>
           <Input
