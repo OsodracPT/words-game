@@ -2,6 +2,7 @@ import * as React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/home";
 import ReviewDetails from "../screens/reviewDetails";
+import Header from "../shared/header";
 
 const Stack = createStackNavigator();
 
@@ -18,7 +19,7 @@ const AppNavigator = () => {
         name="Home"
         component={Home}
         options={{
-          title: "Guess The Word",
+          headerTitle: () => <Header></Header>,
         }}
       />
       <Stack.Screen
