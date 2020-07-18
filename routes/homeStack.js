@@ -9,17 +9,24 @@ const AppNavigator = () => {
   return (
     <Stack.Navigator
       initialRouteName="Home"
-      screenOptions={{ gestureEnabled: false }}
+      screenOptions={{
+        headerStyle: { backgroundColor: "#eee", height: 80 },
+        headerTintColor: "#444",
+      }}
     >
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{ title: "Guess The Word" }}
+        options={{
+          title: "Guess The Word",
+        }}
       />
       <Stack.Screen
         name="Review Details"
         component={ReviewDetails}
-        initialParams={{ user: "me" }}
+        options={{
+          title: "Review Details",
+        }}
       />
     </Stack.Navigator>
   );
