@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
-import { NavigationContainer } from "@react-navigation/native";
-import AppNavigator from "./routes/homeStack";
+import AppNavigator from "./routes/drawer";
 
 const getFonts = () =>
   Font.loadAsync({
@@ -13,11 +12,7 @@ const getFonts = () =>
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
   if (fontsLoaded) {
-    return (
-      <NavigationContainer>
-        <AppNavigator></AppNavigator>
-      </NavigationContainer>
-    );
+    return <AppNavigator></AppNavigator>;
   } else {
     return (
       <AppLoading startAsync={getFonts} onFinish={() => setFontsLoaded(true)} />
